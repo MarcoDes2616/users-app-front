@@ -13,7 +13,6 @@ const VerifyCode = () => {
 
     if(isLoading) return <LoadingScreen />
 
-    console.log(error);
 
     if(error?.response.originalStatus === 404) return(
         <div>
