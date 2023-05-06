@@ -70,18 +70,12 @@ export const authApiSlice = apiSlice.injectEndpoints({
         }),
         changePassword: builder.mutation({
             query: ({password, code}) => {
-                console.log(password, code);
                 return {
                     url: `/users/reset_password/${code}`,
                     method: 'POST',
                     body: {password}
                 }
             },
-            // query: (password, code) => ({
-            //     url: `/users/reset_password/${code}`,
-            //     method: 'POST',
-            //     body: password
-            // }),
             transformResponse: res => ({
                 ...res,
                 notification: "Password changed! Login with your new password"

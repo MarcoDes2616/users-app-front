@@ -23,7 +23,7 @@ const PasswordRecovery = () => {
             return dispatch(showNotification(
                 {message: "passwords are not equal", variant: "danger"}
             ))
-        console.log(code);
+        
         await changePassword({password: pwd, code}).unwrap();
         navigate('/login');
     }
