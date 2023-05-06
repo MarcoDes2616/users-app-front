@@ -1,6 +1,7 @@
 import { apiSlice } from '../../app/api/apiSlice';
 
 export const authApiSlice = apiSlice.injectEndpoints({
+    
     endpoints: builder => ({
         login: builder.mutation({
             query: credentials => ({
@@ -22,6 +23,7 @@ export const authApiSlice = apiSlice.injectEndpoints({
                 response, notification: "Code not found"
             }),
         }),
+        
         createUser: builder.mutation({
             query: user => ({
                 url: '/users',

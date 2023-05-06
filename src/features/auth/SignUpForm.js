@@ -30,7 +30,7 @@ const SignUpForm = () => {
                 </Form.Label>
                 <Form.Control
                     placeholder="Enter firstname"
-                    {...register("firstName")}
+                    {...register("firstname")}
                 />
             </Form.Group>
             <Form.Group className="mb-3" controlId="lastname">
@@ -39,7 +39,7 @@ const SignUpForm = () => {
                 </Form.Label>
                 <Form.Control
                     placeholder="Enter lastname"
-                    {...register("lastName")}
+                    {...register("lastname")}
                 />
             </Form.Group>
             <Form.Group className="mb-3" controlId="email">
